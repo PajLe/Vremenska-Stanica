@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formGeneratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,9 +46,18 @@
             // 
             // newToolStripMenuItem
             // 
+            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formGeneratorToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem.Text = "New";
+            // 
+            // formGeneratorToolStripMenuItem
+            // 
+            this.formGeneratorToolStripMenuItem.Name = "formGeneratorToolStripMenuItem";
+            this.formGeneratorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formGeneratorToolStripMenuItem.Text = "FormGenerator";
+            this.formGeneratorToolStripMenuItem.Click += new System.EventHandler(this.formGeneratorToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -70,6 +80,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formGeneratorToolStripMenuItem;
     }
 }
 

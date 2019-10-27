@@ -16,5 +16,12 @@ namespace VremenskaStanica
         {
             InitializeComponent();
         }
+
+        private void formGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGenerator forma = new FormGenerator();
+            forma.MdiParent = this;
+            forma.Show();
+        }
     }
 }

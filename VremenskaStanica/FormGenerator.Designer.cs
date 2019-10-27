@@ -34,17 +34,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.temperaturaStandard = new System.Windows.Forms.Button();
+            this.temperaturaStandardSetButton = new System.Windows.Forms.Button();
             this.proslediButton = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.vlaznostStandard = new System.Windows.Forms.Button();
-            this.pritisakStandard = new System.Windows.Forms.Button();
+            this.vlaznostStandardSetButton = new System.Windows.Forms.Button();
+            this.pritisakStandardSetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // temperaturaTextBox
             // 
+            this.temperaturaTextBox.Enabled = false;
             this.temperaturaTextBox.Location = new System.Drawing.Point(169, 13);
             this.temperaturaTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.temperaturaTextBox.Name = "temperaturaTextBox";
@@ -53,6 +54,7 @@
             // 
             // pritisakTextBox
             // 
+            this.pritisakTextBox.Enabled = false;
             this.pritisakTextBox.Location = new System.Drawing.Point(169, 78);
             this.pritisakTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.pritisakTextBox.Name = "pritisakTextBox";
@@ -61,6 +63,7 @@
             // 
             // vlaznostTextBox
             // 
+            this.vlaznostTextBox.Enabled = false;
             this.vlaznostTextBox.Location = new System.Drawing.Point(169, 150);
             this.vlaznostTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.vlaznostTextBox.Name = "vlaznostTextBox";
@@ -100,16 +103,17 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Vlažnost";
             // 
-            // temperaturaStandard
+            // temperaturaStandardSetButton
             // 
-            this.temperaturaStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.temperaturaStandard.Location = new System.Drawing.Point(469, 13);
-            this.temperaturaStandard.Margin = new System.Windows.Forms.Padding(6);
-            this.temperaturaStandard.Name = "temperaturaStandard";
-            this.temperaturaStandard.Size = new System.Drawing.Size(32, 27);
-            this.temperaturaStandard.TabIndex = 6;
-            this.temperaturaStandard.Text = "*";
-            this.temperaturaStandard.UseVisualStyleBackColor = true;
+            this.temperaturaStandardSetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temperaturaStandardSetButton.Location = new System.Drawing.Point(469, 13);
+            this.temperaturaStandardSetButton.Margin = new System.Windows.Forms.Padding(6);
+            this.temperaturaStandardSetButton.Name = "temperaturaStandardSetButton";
+            this.temperaturaStandardSetButton.Size = new System.Drawing.Size(32, 27);
+            this.temperaturaStandardSetButton.TabIndex = 6;
+            this.temperaturaStandardSetButton.Text = "*";
+            this.temperaturaStandardSetButton.UseVisualStyleBackColor = true;
+            this.temperaturaStandardSetButton.Click += new System.EventHandler(this.temperaturaStandardSetButton_Click);
             // 
             // proslediButton
             // 
@@ -152,40 +156,42 @@
             this.textBox4.Size = new System.Drawing.Size(55, 29);
             this.textBox4.TabIndex = 12;
             // 
-            // vlaznostStandard
+            // vlaznostStandardSetButton
             // 
-            this.vlaznostStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vlaznostStandard.Location = new System.Drawing.Point(469, 152);
-            this.vlaznostStandard.Margin = new System.Windows.Forms.Padding(6);
-            this.vlaznostStandard.Name = "vlaznostStandard";
-            this.vlaznostStandard.Size = new System.Drawing.Size(32, 27);
-            this.vlaznostStandard.TabIndex = 13;
-            this.vlaznostStandard.Text = "*";
-            this.vlaznostStandard.UseVisualStyleBackColor = true;
+            this.vlaznostStandardSetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vlaznostStandardSetButton.Location = new System.Drawing.Point(469, 152);
+            this.vlaznostStandardSetButton.Margin = new System.Windows.Forms.Padding(6);
+            this.vlaznostStandardSetButton.Name = "vlaznostStandardSetButton";
+            this.vlaznostStandardSetButton.Size = new System.Drawing.Size(32, 27);
+            this.vlaznostStandardSetButton.TabIndex = 13;
+            this.vlaznostStandardSetButton.Text = "*";
+            this.vlaznostStandardSetButton.UseVisualStyleBackColor = true;
+            this.vlaznostStandardSetButton.Click += new System.EventHandler(this.vlaznostStandardSetButton_Click);
             // 
-            // pritisakStandard
+            // pritisakStandardSetButton
             // 
-            this.pritisakStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pritisakStandard.Location = new System.Drawing.Point(469, 83);
-            this.pritisakStandard.Margin = new System.Windows.Forms.Padding(6);
-            this.pritisakStandard.Name = "pritisakStandard";
-            this.pritisakStandard.Size = new System.Drawing.Size(32, 27);
-            this.pritisakStandard.TabIndex = 14;
-            this.pritisakStandard.Text = "*";
-            this.pritisakStandard.UseVisualStyleBackColor = true;
+            this.pritisakStandardSetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pritisakStandardSetButton.Location = new System.Drawing.Point(469, 83);
+            this.pritisakStandardSetButton.Margin = new System.Windows.Forms.Padding(6);
+            this.pritisakStandardSetButton.Name = "pritisakStandardSetButton";
+            this.pritisakStandardSetButton.Size = new System.Drawing.Size(32, 27);
+            this.pritisakStandardSetButton.TabIndex = 14;
+            this.pritisakStandardSetButton.Text = "*";
+            this.pritisakStandardSetButton.UseVisualStyleBackColor = true;
+            this.pritisakStandardSetButton.Click += new System.EventHandler(this.pritisakStandardSetButton_Click);
             // 
             // FormGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 349);
-            this.Controls.Add(this.pritisakStandard);
-            this.Controls.Add(this.vlaznostStandard);
+            this.Controls.Add(this.pritisakStandardSetButton);
+            this.Controls.Add(this.vlaznostStandardSetButton);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.proslediButton);
-            this.Controls.Add(this.temperaturaStandard);
+            this.Controls.Add(this.temperaturaStandardSetButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -211,12 +217,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button temperaturaStandard;
+        private System.Windows.Forms.Button temperaturaStandardSetButton;
         private System.Windows.Forms.Button proslediButton;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button vlaznostStandard;
-        private System.Windows.Forms.Button pritisakStandard;
+        private System.Windows.Forms.Button vlaznostStandardSetButton;
+        private System.Windows.Forms.Button pritisakStandardSetButton;
     }
 }

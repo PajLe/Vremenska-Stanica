@@ -88,5 +88,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParametarskiStandardi\ParametarskiStandardi.csproj">
+      <Project>{dcd34687-5162-4a0d-a177-776d7476e520}</Project>
+      <Name>ParametarskiStandardi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PomocneForme\PomocneForme.csproj">
+      <Project>{49b23fa0-a84b-4cba-8986-00e2d35546e9}</Project>
+      <Name>PomocneForme</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
