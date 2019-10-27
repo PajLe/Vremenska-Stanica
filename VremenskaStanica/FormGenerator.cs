@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VremenskaStanica
 {
-    public partial class Form1 : Form
+    public partial class FormGenerator : Form
     {
-        public Form1()
+        public FormGenerator()
         {
             InitializeComponent();
         }
