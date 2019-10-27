@@ -8,17 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VremenskaStanica
+namespace PomocneForme
 {
-    public partial class FormGenerator : Form
+    public partial class DefinicijaStandardaForma : Form
     {
-        
-
-        public FormGenerator()
+        public DefinicijaStandardaForma()
         {
             InitializeComponent();
         }
-
-
     }
 }
