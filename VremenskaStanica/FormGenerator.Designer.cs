@@ -42,8 +42,12 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.vlaznostStandardSetButton = new System.Windows.Forms.Button();
             this.pritisakStandardSetButton = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.tempErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pritisakErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.vlaznostErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tempErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pritisakErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlaznostErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // temperaturaTextBox
@@ -54,6 +58,8 @@
             this.temperaturaTextBox.Name = "temperaturaTextBox";
             this.temperaturaTextBox.Size = new System.Drawing.Size(274, 29);
             this.temperaturaTextBox.TabIndex = 0;
+            this.temperaturaTextBox.Enter += new System.EventHandler(this.temperaturaTextBox_Enter);
+            this.temperaturaTextBox.Leave += new System.EventHandler(this.temperaturaTextBox_Leave);
             // 
             // pritisakTextBox
             // 
@@ -63,6 +69,8 @@
             this.pritisakTextBox.Name = "pritisakTextBox";
             this.pritisakTextBox.Size = new System.Drawing.Size(274, 29);
             this.pritisakTextBox.TabIndex = 1;
+            this.pritisakTextBox.Enter += new System.EventHandler(this.pritisakTextBox_Enter);
+            this.pritisakTextBox.Leave += new System.EventHandler(this.pritisakTextBox_Leave);
             // 
             // vlaznostTextBox
             // 
@@ -72,6 +80,8 @@
             this.vlaznostTextBox.Name = "vlaznostTextBox";
             this.vlaznostTextBox.Size = new System.Drawing.Size(274, 29);
             this.vlaznostTextBox.TabIndex = 2;
+            this.vlaznostTextBox.Enter += new System.EventHandler(this.vlaznostTextBox_Enter);
+            this.vlaznostTextBox.Leave += new System.EventHandler(this.vlaznostTextBox_Leave);
             // 
             // label1
             // 
@@ -183,9 +193,17 @@
             this.pritisakStandardSetButton.UseVisualStyleBackColor = true;
             this.pritisakStandardSetButton.Click += new System.EventHandler(this.pritisakStandardSetButton_Click);
             // 
-            // errorProvider1
+            // tempErrorProvider
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.tempErrorProvider.ContainerControl = this;
+            // 
+            // pritisakErrorProvider
+            // 
+            this.pritisakErrorProvider.ContainerControl = this;
+            // 
+            // vlaznostErrorProvider
+            // 
+            this.vlaznostErrorProvider.ContainerControl = this;
             // 
             // FormGenerator
             // 
@@ -212,7 +230,9 @@
             this.Name = "FormGenerator";
             this.Text = "FormGenerator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormGenerator_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tempErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pritisakErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlaznostErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +253,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button vlaznostStandardSetButton;
         private System.Windows.Forms.Button pritisakStandardSetButton;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider tempErrorProvider;
+        private System.Windows.Forms.ErrorProvider pritisakErrorProvider;
+        private System.Windows.Forms.ErrorProvider vlaznostErrorProvider;
     }
 }
