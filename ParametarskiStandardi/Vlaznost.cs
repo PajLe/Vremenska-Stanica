@@ -28,11 +28,16 @@ namespace ParametarskiStandardi
 
         public bool postaviStandard(double min, double max)
         {
-            if (min > max)
+            if (min >= max)
                 return false;
             minStandard = min;
             maxStandard = max;
             return true;
+        }
+
+        public bool imaDefinisanStandard()
+        {
+            return !(minStandard == 0 && maxStandard == 0);
         }
 
         public double MinStandard { get { return minStandard; } }

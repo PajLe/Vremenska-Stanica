@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.temperaturaTextBox = new System.Windows.Forms.TextBox();
             this.pritisakTextBox = new System.Windows.Forms.TextBox();
             this.vlaznostTextBox = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.vlaznostStandardSetButton = new System.Windows.Forms.Button();
             this.pritisakStandardSetButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // temperaturaTextBox
@@ -180,6 +183,10 @@
             this.pritisakStandardSetButton.UseVisualStyleBackColor = true;
             this.pritisakStandardSetButton.Click += new System.EventHandler(this.pritisakStandardSetButton_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -204,6 +211,8 @@
             this.MinimumSize = new System.Drawing.Size(605, 388);
             this.Name = "FormGenerator";
             this.Text = "FormGenerator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormGenerator_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +233,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button vlaznostStandardSetButton;
         private System.Windows.Forms.Button pritisakStandardSetButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

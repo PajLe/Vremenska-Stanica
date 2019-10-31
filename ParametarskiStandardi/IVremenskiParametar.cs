@@ -12,5 +12,6 @@ namespace ParametarskiStandardi
         double MinStandard { get; }
         double MaxStandard { get; }
         bool postaviStandard(double min, double max);
+        bool imaDefinisanStandard();
     }
 }
