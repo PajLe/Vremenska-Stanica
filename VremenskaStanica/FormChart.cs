@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParametarskiStandardi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,22 @@ namespace VremenskaStanica
 {
     public partial class FormChart : Form, IUpdatable
     {
-        public FormChart()
+        private int N;
+        private IVremenskiParametar param;
+
+        public FormChart(IVremenskiParametar param)
         {
             InitializeComponent();
+            
         }
 
-        public void Update()
+        public FormChart(IVremenskiParametar param, int N)
+        {
+            InitializeComponent();
+
+        }
+
+        public new void Update()
         {
             // handle update for this form
             throw new NotImplementedException();

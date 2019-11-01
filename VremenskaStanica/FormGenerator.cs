@@ -130,5 +130,10 @@ namespace VremenskaStanica
         {
             vlaznostErrorProvider.Clear();
         }
+
+        private void proslediButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

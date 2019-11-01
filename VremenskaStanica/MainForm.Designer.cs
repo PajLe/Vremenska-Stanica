@@ -31,6 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formGeneratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vlažnostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pritisakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +51,8 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formGeneratorToolStripMenuItem});
+            this.formGeneratorToolStripMenuItem,
+            this.formChartToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem.Text = "New";
@@ -58,6 +63,37 @@
             this.formGeneratorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.formGeneratorToolStripMenuItem.Text = "FormGenerator";
             this.formGeneratorToolStripMenuItem.Click += new System.EventHandler(this.formGeneratorToolStripMenuItem_Click);
+            // 
+            // formChartToolStripMenuItem
+            // 
+            this.formChartToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.temperaturaToolStripMenuItem,
+            this.vlažnostToolStripMenuItem,
+            this.pritisakToolStripMenuItem});
+            this.formChartToolStripMenuItem.Name = "formChartToolStripMenuItem";
+            this.formChartToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formChartToolStripMenuItem.Text = "FormChart";
+            // 
+            // temperaturaToolStripMenuItem
+            // 
+            this.temperaturaToolStripMenuItem.Name = "temperaturaToolStripMenuItem";
+            this.temperaturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperaturaToolStripMenuItem.Text = "Temperatura";
+            this.temperaturaToolStripMenuItem.Click += new System.EventHandler(this.temperaturaToolStripMenuItem_Click);
+            // 
+            // vlažnostToolStripMenuItem
+            // 
+            this.vlažnostToolStripMenuItem.Name = "vlažnostToolStripMenuItem";
+            this.vlažnostToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vlažnostToolStripMenuItem.Text = "Vlažnost";
+            this.vlažnostToolStripMenuItem.Click += new System.EventHandler(this.vlažnostToolStripMenuItem_Click);
+            // 
+            // pritisakToolStripMenuItem
+            // 
+            this.pritisakToolStripMenuItem.Name = "pritisakToolStripMenuItem";
+            this.pritisakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pritisakToolStripMenuItem.Text = "Pritisak";
+            this.pritisakToolStripMenuItem.Click += new System.EventHandler(this.pritisakToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -81,6 +117,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formGeneratorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formChartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temperaturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vlažnostToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pritisakToolStripMenuItem;
     }
 }
 

@@ -138,6 +138,7 @@
             this.proslediButton.TabIndex = 9;
             this.proslediButton.Text = "Prosledi";
             this.proslediButton.UseVisualStyleBackColor = true;
+            this.proslediButton.Click += new System.EventHandler(this.proslediButton_Click);
             // 
             // checkBox1
             // 

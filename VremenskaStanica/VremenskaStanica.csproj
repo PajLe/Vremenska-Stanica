@@ -52,6 +52,12 @@
     <Compile Include="FormChart.Designer.cs">
       <DependentUpon>FormChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChartConstructDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChartConstructDialog.Designer.cs">
+      <DependentUpon>FormChartConstructDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGenerator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChart.resx">
+      <DependentUpon>FormChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChartConstructDialog.resx">
+      <DependentUpon>FormChartConstructDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGenerator.resx">
       <DependentUpon>FormGenerator.cs</DependentUpon>
     </EmbeddedResource>

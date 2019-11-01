@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParametarskiStandardi;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,24 @@ namespace VremenskaStanica
             FormGenerator forma = new FormGenerator();
             forma.MdiParent = this;
             forma.Show();
+        }
+
+        private void temperaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChartConstructDialog fcd = new FormChartConstructDialog(Temperatura.instance(), this);
+            fcd.ShowDialog();
+        }
+
+        private void vlažnostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChartConstructDialog fcd = new FormChartConstructDialog(Vlaznost.instance(), this);
+            fcd.ShowDialog();
+        }
+
+        private void pritisakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChartConstructDialog fcd = new FormChartConstructDialog(Pritisak.instance(), this);
+            fcd.ShowDialog();
         }
     }
 }
