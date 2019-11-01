@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace VremenskaStanica
 {
-    public partial class MainForm : Form, INotifier
+    public partial class FormChart : Form, IUpdatable
     {
-        public MainForm()
+        public FormChart()
         {
             InitializeComponent();
         }
 
-        public void Notify()
+        public void Update()
         {
-            // for each child call update
+            // handle update for this form
             throw new NotImplementedException();
-        }
-
-        private void formGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormGenerator forma = new FormGenerator();
-            forma.MdiParent = this;
-            forma.Show();
         }
     }
 }
