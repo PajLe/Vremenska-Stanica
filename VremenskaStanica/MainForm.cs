@@ -18,10 +18,16 @@ namespace VremenskaStanica
             InitializeComponent();
         }
 
-        public void Notify()
+        public void Notify(Dictionary<IVremenskiParametar, double> vrednostiVremenskihParametara, DateTime vremeSlanja)
         {
-            // for each child call update
-            throw new NotImplementedException();
+            foreach(Form form in this.MdiChildren)
+            {
+                IUpdatable client = form as IUpdatable;
+                if (client == null)
+                    continue;
+
+                client.Update(vrednostiVremenskihParametara, vremeSlanja);
+            }
         }
 
         private void formGeneratorToolStripMenuItem_Click(object sender, EventArgs e)

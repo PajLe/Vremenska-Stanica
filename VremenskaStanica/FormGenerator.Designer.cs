@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.temperaturaStandardSetButton = new System.Windows.Forms.Button();
             this.proslediButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbIgnorisiGranice = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.vlaznostStandardSetButton = new System.Windows.Forms.Button();
@@ -140,16 +140,16 @@
             this.proslediButton.UseVisualStyleBackColor = true;
             this.proslediButton.Click += new System.EventHandler(this.proslediButton_Click);
             // 
-            // checkBox1
+            // cbIgnorisiGranice
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 257);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(157, 28);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "ignoriši granice";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbIgnorisiGranice.AutoSize = true;
+            this.cbIgnorisiGranice.Location = new System.Drawing.Point(15, 257);
+            this.cbIgnorisiGranice.Margin = new System.Windows.Forms.Padding(6);
+            this.cbIgnorisiGranice.Name = "cbIgnorisiGranice";
+            this.cbIgnorisiGranice.Size = new System.Drawing.Size(157, 28);
+            this.cbIgnorisiGranice.TabIndex = 10;
+            this.cbIgnorisiGranice.Text = "ignoriši granice";
+            this.cbIgnorisiGranice.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
@@ -215,7 +215,7 @@
             this.Controls.Add(this.vlaznostStandardSetButton);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbIgnorisiGranice);
             this.Controls.Add(this.proslediButton);
             this.Controls.Add(this.temperaturaStandardSetButton);
             this.Controls.Add(this.label3);
@@ -249,7 +249,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button temperaturaStandardSetButton;
         private System.Windows.Forms.Button proslediButton;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbIgnorisiGranice;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button vlaznostStandardSetButton;

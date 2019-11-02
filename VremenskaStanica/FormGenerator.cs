@@ -85,18 +85,27 @@ namespace VremenskaStanica
 
         private void validateAndFixTextBox(TextBox tb, ErrorProvider ep)
         {
-            if (string.IsNullOrEmpty(tb.Text))
+            if (string.IsNullOrEmpty(tb.Text) && !cbIgnorisiGranice.Checked)
                 ep.SetError(tb, "Parametar " + textBoxToStandard[tb].Ime + " ne sme biti prazan!");
             else
             {
                 double vrednost;
                 if (double.TryParse(tb.Text, out vrednost))
                 {
+                    bool changed = false;
                     if (vrednost > textBoxToStandard[tb].MaxStandard)
+                    {
                         vrednost = textBoxToStandard[tb].MaxStandard;
+                        changed = true;
+                    }
                     else if (vrednost < textBoxToStandard[tb].MinStandard)
+                    {
                         vrednost = textBoxToStandard[tb].MinStandard;
+                        changed = true;
+                    }
                     tb.Text = vrednost.ToString();
+                    if (changed && cbIgnorisiGranice.Checked)
+                        tb.Text = "";
                 }
                 else
                 {
@@ -133,7 +142,21 @@ namespace VremenskaStanica
 
         private void proslediButton_Click(object sender, EventArgs e)
         {
+            Dictionary<IVremenskiParametar, double> zaProslediti = new Dictionary<IVremenskiParametar, double>();
+            foreach(TextBox vrednostParametra in textBoxToStandard.Keys)
+            {
+                double vrednost;
+                if (double.TryParse(vrednostParametra.Text, out vrednost))
+                {
+                    zaProslediti.Add(textBoxToStandard[vrednostParametra], vrednost);
+                }
+            }
 
+            INotifier notifier = this.MdiParent as INotifier;
+            if (notifier != null)
+            {
+                notifier.Notify(zaProslediti, DateTime.Now);
+            }
         }
     }
 }
