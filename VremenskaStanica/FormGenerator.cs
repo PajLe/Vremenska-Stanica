@@ -16,12 +16,15 @@ namespace VremenskaStanica
     {
         private Dictionary<IVremenskiParametar, TextBox> standardToTextBox = new Dictionary<IVremenskiParametar, TextBox>();
         private Dictionary<TextBox, IVremenskiParametar> textBoxToStandard = new Dictionary<TextBox, IVremenskiParametar>();
+        private Timer timer = new Timer();
+        
 
         public FormGenerator()
         {
             InitializeComponent();
             inicijalizacijaRecnika();
             inicijalizacijaTextBoxova();
+            timer.Tick += new EventHandler(proslediButton_Click);
         }
 
         private void inicijalizacijaRecnika()
@@ -157,6 +160,42 @@ namespace VremenskaStanica
             {
                 notifier.Notify(zaProslediti, DateTime.Now);
             }
+        }
+
+        private void autoGenCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autoGenCheckBox.Checked)
+            {
+                if (string.IsNullOrEmpty(autoGenIntervalTextBox.Text))
+                {
+                    intervalErrorProvider.SetError(autoGenIntervalTextBox, "Unesite interval u sekundama [1-9]");
+                    autoGenCheckBox.Checked = false;
+                } else 
+                {
+                    int vrednostIntervala;
+                    if (int.TryParse(autoGenIntervalTextBox.Text, out vrednostIntervala))
+                    {
+                        if (vrednostIntervala > 9)
+                            vrednostIntervala = 9;
+                        else if (vrednostIntervala < 1)
+                            vrednostIntervala = 1;    
+                        
+                        proslediButton.Enabled = false;
+                        
+                        timer.Interval = vrednostIntervala * 1000;
+                        timer.Start();
+                    }
+                }
+            } else
+            {
+                proslediButton.Enabled = true;
+                timer.Stop();
+            }
+        }
+
+        private void autoGenIntervalTextBox_Enter(object sender, EventArgs e)
+        {
+            intervalErrorProvider.Clear();
         }
     }
 }

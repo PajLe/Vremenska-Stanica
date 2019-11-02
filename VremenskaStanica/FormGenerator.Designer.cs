@@ -38,16 +38,18 @@
             this.temperaturaStandardSetButton = new System.Windows.Forms.Button();
             this.proslediButton = new System.Windows.Forms.Button();
             this.cbIgnorisiGranice = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.autoGenCheckBox = new System.Windows.Forms.CheckBox();
+            this.autoGenIntervalTextBox = new System.Windows.Forms.TextBox();
             this.vlaznostStandardSetButton = new System.Windows.Forms.Button();
             this.pritisakStandardSetButton = new System.Windows.Forms.Button();
             this.tempErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pritisakErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.vlaznostErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.intervalErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tempErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pritisakErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlaznostErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intervalErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // temperaturaTextBox
@@ -151,24 +153,26 @@
             this.cbIgnorisiGranice.Text = "ignoriši granice";
             this.cbIgnorisiGranice.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // autoGenCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 297);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(502, 28);
-            this.checkBox2.TabIndex = 11;
-            this.checkBox2.Text = "automatsko generisanje podataka. interval u sekundama:";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.autoGenCheckBox.AutoSize = true;
+            this.autoGenCheckBox.Location = new System.Drawing.Point(15, 297);
+            this.autoGenCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.autoGenCheckBox.Name = "autoGenCheckBox";
+            this.autoGenCheckBox.Size = new System.Drawing.Size(502, 28);
+            this.autoGenCheckBox.TabIndex = 11;
+            this.autoGenCheckBox.Text = "automatsko generisanje podataka. interval u sekundama:";
+            this.autoGenCheckBox.UseVisualStyleBackColor = true;
+            this.autoGenCheckBox.CheckedChanged += new System.EventHandler(this.autoGenCheckBox_CheckedChanged);
             // 
-            // textBox4
+            // autoGenIntervalTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(523, 296);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(55, 29);
-            this.textBox4.TabIndex = 12;
+            this.autoGenIntervalTextBox.Location = new System.Drawing.Point(523, 296);
+            this.autoGenIntervalTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.autoGenIntervalTextBox.Name = "autoGenIntervalTextBox";
+            this.autoGenIntervalTextBox.Size = new System.Drawing.Size(55, 29);
+            this.autoGenIntervalTextBox.TabIndex = 12;
+            this.autoGenIntervalTextBox.Enter += new System.EventHandler(this.autoGenIntervalTextBox_Enter);
             // 
             // vlaznostStandardSetButton
             // 
@@ -206,6 +210,10 @@
             // 
             this.vlaznostErrorProvider.ContainerControl = this;
             // 
+            // intervalErrorProvider
+            // 
+            this.intervalErrorProvider.ContainerControl = this;
+            // 
             // FormGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -213,8 +221,8 @@
             this.ClientSize = new System.Drawing.Size(589, 349);
             this.Controls.Add(this.pritisakStandardSetButton);
             this.Controls.Add(this.vlaznostStandardSetButton);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.autoGenIntervalTextBox);
+            this.Controls.Add(this.autoGenCheckBox);
             this.Controls.Add(this.cbIgnorisiGranice);
             this.Controls.Add(this.proslediButton);
             this.Controls.Add(this.temperaturaStandardSetButton);
@@ -234,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pritisakErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlaznostErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intervalErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,12 +259,13 @@
         private System.Windows.Forms.Button temperaturaStandardSetButton;
         private System.Windows.Forms.Button proslediButton;
         private System.Windows.Forms.CheckBox cbIgnorisiGranice;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.CheckBox autoGenCheckBox;
+        private System.Windows.Forms.TextBox autoGenIntervalTextBox;
         private System.Windows.Forms.Button vlaznostStandardSetButton;
         private System.Windows.Forms.Button pritisakStandardSetButton;
         private System.Windows.Forms.ErrorProvider tempErrorProvider;
         private System.Windows.Forms.ErrorProvider pritisakErrorProvider;
         private System.Windows.Forms.ErrorProvider vlaznostErrorProvider;
+        private System.Windows.Forms.ErrorProvider intervalErrorProvider;
     }
 }

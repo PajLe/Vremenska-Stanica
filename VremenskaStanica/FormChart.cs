@@ -59,7 +59,7 @@ namespace VremenskaStanica
                     jedanParametarChart.ChartAreas[0].RecalculateAxesScale();
                     jedanParametarChart.ChartAreas[1].RecalculateAxesScale();
                     this.Text = vr.ToString();
-                    entries.Enqueue(vr + "   " + vremeSlanja.ToString());
+                    entries.Enqueue(paramIme + " - " + vr + "   " + vremeSlanja.ToString());
                     break; // parametri unutar recnika su jedinstveni, ne moramo da trazimo dalje
                 }
             }
