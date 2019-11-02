@@ -78,6 +78,7 @@
             title2.Text = "Logaritamski";
             this.jedanParametarChart.Titles.Add(title1);
             this.jedanParametarChart.Titles.Add(title2);
+            this.jedanParametarChart.Click += new System.EventHandler(this.jedanParametarChart_Click);
             // 
             // FormChart
             // 

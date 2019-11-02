@@ -49,11 +49,20 @@
     <Compile Include="DefinicijaStandardaForma.Designer.cs">
       <DependentUpon>DefinicijaStandardaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaUnetihVrednosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaUnetihVrednosti.Designer.cs">
+      <DependentUpon>ListaUnetihVrednosti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DefinicijaStandardaForma.resx">
       <DependentUpon>DefinicijaStandardaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaUnetihVrednosti.resx">
+      <DependentUpon>ListaUnetihVrednosti.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
