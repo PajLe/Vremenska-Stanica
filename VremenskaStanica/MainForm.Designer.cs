@@ -35,6 +35,7 @@
             this.temperaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vlažnostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pritisakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formStatisticalDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             // 
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formGeneratorToolStripMenuItem,
-            this.formChartToolStripMenuItem});
+            this.formChartToolStripMenuItem,
+            this.formStatisticalDataToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.newToolStripMenuItem.Text = "New";
@@ -77,23 +79,30 @@
             // temperaturaToolStripMenuItem
             // 
             this.temperaturaToolStripMenuItem.Name = "temperaturaToolStripMenuItem";
-            this.temperaturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperaturaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.temperaturaToolStripMenuItem.Text = "Temperatura";
             this.temperaturaToolStripMenuItem.Click += new System.EventHandler(this.temperaturaToolStripMenuItem_Click);
             // 
             // vlažnostToolStripMenuItem
             // 
             this.vlažnostToolStripMenuItem.Name = "vlažnostToolStripMenuItem";
-            this.vlažnostToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vlažnostToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.vlažnostToolStripMenuItem.Text = "Vlažnost";
             this.vlažnostToolStripMenuItem.Click += new System.EventHandler(this.vlažnostToolStripMenuItem_Click);
             // 
             // pritisakToolStripMenuItem
             // 
             this.pritisakToolStripMenuItem.Name = "pritisakToolStripMenuItem";
-            this.pritisakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pritisakToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.pritisakToolStripMenuItem.Text = "Pritisak";
             this.pritisakToolStripMenuItem.Click += new System.EventHandler(this.pritisakToolStripMenuItem_Click);
+            // 
+            // formStatisticalDataToolStripMenuItem
+            // 
+            this.formStatisticalDataToolStripMenuItem.Name = "formStatisticalDataToolStripMenuItem";
+            this.formStatisticalDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formStatisticalDataToolStripMenuItem.Text = "FormStatisticalData";
+            this.formStatisticalDataToolStripMenuItem.Click += new System.EventHandler(this.formStatisticalDataToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -121,6 +130,7 @@
         private System.Windows.Forms.ToolStripMenuItem temperaturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vlažnostToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pritisakToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formStatisticalDataToolStripMenuItem;
     }
 }
 

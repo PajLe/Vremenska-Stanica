@@ -152,6 +152,7 @@
             this.Controls.Add(this.paramImeLabel);
             this.Controls.Add(this.label1);
             this.Name = "DefinicijaStandardaForma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Definicija standarda";
             ((System.ComponentModel.ISupportInitialize)(this.minNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxNumericUpDown)).EndInit();

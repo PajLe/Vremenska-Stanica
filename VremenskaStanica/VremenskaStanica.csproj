@@ -65,6 +65,12 @@
     <Compile Include="FormGenerator.Designer.cs">
       <DependentUpon>FormGenerator.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStatisticalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatisticalData.Designer.cs">
+      <DependentUpon>FormStatisticalData.cs</DependentUpon>
+    </Compile>
     <Compile Include="INotifier.cs" />
     <Compile Include="IUpdatable.cs" />
     <Compile Include="MainForm.cs">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGenerator.resx">
       <DependentUpon>FormGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatisticalData.resx">
+      <DependentUpon>FormStatisticalData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

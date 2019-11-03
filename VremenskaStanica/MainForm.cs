@@ -54,5 +54,12 @@ namespace VremenskaStanica
             FormChartConstructDialog fcd = new FormChartConstructDialog(Pritisak.instance(), this);
             fcd.ShowDialog();
         }
+
+        private void formStatisticalDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStatisticalData forma = new FormStatisticalData();
+            forma.MdiParent = this;
+            forma.Show();
+        }
     }
 }

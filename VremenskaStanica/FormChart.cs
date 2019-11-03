@@ -53,7 +53,7 @@ namespace VremenskaStanica
 
                     double vr = vrednostiVremenskihParametara[vParam];
                     jedanParametarChart.Series[0].Points.AddY(vr); // linear series[0]
-                    if (vr >= 0.0)
+                    if (vr > 0.0)
                         jedanParametarChart.Series[1].Points.AddY(vr); // logarithmic series[1]
 
                     jedanParametarChart.ChartAreas[0].RecalculateAxesScale();

@@ -173,6 +173,7 @@
             this.autoGenIntervalTextBox.Size = new System.Drawing.Size(55, 29);
             this.autoGenIntervalTextBox.TabIndex = 12;
             this.autoGenIntervalTextBox.Enter += new System.EventHandler(this.autoGenIntervalTextBox_Enter);
+            this.autoGenIntervalTextBox.Leave += new System.EventHandler(this.autoGenIntervalTextBox_Leave);
             // 
             // vlaznostStandardSetButton
             // 

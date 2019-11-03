@@ -181,21 +181,33 @@ namespace VremenskaStanica
                             vrednostIntervala = 1;    
                         
                         proslediButton.Enabled = false;
+                        autoGenIntervalTextBox.Text = vrednostIntervala.ToString();
+                        autoGenIntervalTextBox.Enabled = false;
                         
                         timer.Interval = vrednostIntervala * 1000;
                         timer.Start();
+                    } else
+                    {
+                        autoGenIntervalTextBox.Text = "";
                     }
                 }
             } else
             {
                 proslediButton.Enabled = true;
                 timer.Stop();
+                autoGenIntervalTextBox.Enabled = true;
             }
         }
 
         private void autoGenIntervalTextBox_Enter(object sender, EventArgs e)
         {
             intervalErrorProvider.Clear();
+        }
+
+        private void autoGenIntervalTextBox_Leave(object sender, EventArgs e)
+        {
+            if (autoGenCheckBox.Checked)
+                autoGenCheckBox.Checked = false;
         }
     }
 }
