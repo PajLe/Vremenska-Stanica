@@ -149,7 +149,6 @@
             this.brojVrednostiTextBox.Size = new System.Drawing.Size(67, 31);
             this.brojVrednostiTextBox.TabIndex = 10;
             this.brojVrednostiTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.brojVrednostiTextBox_KeyUp);
-            
             // 
             // label7
             // 
@@ -184,6 +183,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormStatisticalData";
             this.Text = "FormStatisticalData";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormStatisticalData_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.brVrednostiErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

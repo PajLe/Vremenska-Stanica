@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ParametarskiStandardi;
+using PomocneForme;
 
 namespace VremenskaStanica
 {
@@ -22,8 +23,16 @@ namespace VremenskaStanica
             paramToTextBox = new Dictionary<IVremenskiParametar, TextBox>();
             paramToValues = new Dictionary<IVremenskiParametar, List<double>>();
             paramToLabel = new Dictionary<IVremenskiParametar, Label>();
+            DefinicijaStandardaForma.DefinisanStandardDogadjaj += noviStandardDefHandler;
             InitializeComponent();
             inicijalizacijaRecnika();
+        }
+
+        private void noviStandardDefHandler(IVremenskiParametar vParam)
+        {
+            paramToValues[vParam] = new List<double>();
+            paramToTextBox[vParam].Clear();
+            paramToLabel[vParam].Text = vParam.Ime;
         }
 
         private void inicijalizacijaRecnika()
@@ -98,6 +107,11 @@ namespace VremenskaStanica
             }
             else
                 brojVrednostiTextBox.Text = "";
+        }
+
+        private void FormStatisticalData_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DefinicijaStandardaForma.DefinisanStandardDogadjaj -= noviStandardDefHandler;
         }
     }
 }
